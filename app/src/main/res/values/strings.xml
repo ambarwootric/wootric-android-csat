@@ -2,4 +2,6 @@
     <string name="app_name">Wootric CSAT</string>
     <string name="wootric_csat">WOOTRIC-CSAT</string>
     <string name="survey">SURVEY</string>
+    <string name="country">Country</string>
+    <string name="age">Age</string>
 </resources>
