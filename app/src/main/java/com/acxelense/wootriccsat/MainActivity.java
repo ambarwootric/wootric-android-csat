@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.wootric.androidsdk.Wootric;
+import com.wootric.androidsdk.objects.WootricCustomMessage;
 
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -50,6 +51,13 @@ public class MainActivity extends AppCompatActivity {
         endUserDetails.put("age_amount", age.getText().toString());
 
         wootric.setProperties(endUserDetails);
+
+        // Customize follow up message/question after getting score
+        WootricCustomMessage customMessage = new WootricCustomMessage();
+        customMessage.setFollowupQuestion("Thank You! Please help us by feedback");
+        customMessage.setPlaceholderText("Write brief explanation behind your score for us");
+
+        wootric.setCustomMessage(customMessage);
 
         // Use only for testing
         wootric.setSurveyImmediately(true);
